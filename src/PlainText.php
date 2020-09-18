@@ -12,4 +12,14 @@ class PlainText extends Field
      * @var string
      */
     public $component = 'plain-text';
+
+    public function asHtml()
+    {
+        return $this->withMeta(['asHtml' => true]);
+    }
+
+    public function asText()
+    {
+        return $this->withMeta(['asHtml' => false]);
+    }
 }
