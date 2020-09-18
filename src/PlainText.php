@@ -13,6 +13,9 @@ class PlainText extends Field
      */
     public $component = 'plain-text';
 
+    // Read-only by default
+    public $readonlyCallback = true;
+
     public function asHtml()
     {
         return $this->withMeta(['asHtml' => true]);
