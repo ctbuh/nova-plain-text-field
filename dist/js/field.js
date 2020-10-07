@@ -437,6 +437,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     computed: {
         shouldDisplayAsHtml: function shouldDisplayAsHtml() {
             return this.field.asHtml;
+        },
+        isFullWidth: function isFullWidth() {
+            return this.field.fullWidth;
         }
     }
 });
@@ -27969,7 +27972,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "default-field",
-    { attrs: { field: _vm.field } },
+    { attrs: { field: _vm.field, "full-width-content": _vm.isFullWidth } },
     [
       _c("template", { slot: "field" }, [
         _vm.shouldDisplayAsHtml

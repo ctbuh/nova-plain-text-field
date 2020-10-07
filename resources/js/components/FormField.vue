@@ -1,5 +1,5 @@
 <template>
-    <default-field :field="field">
+    <default-field :field="field" :full-width-content="isFullWidth">
         <template slot="field">
             <div v-if="shouldDisplayAsHtml" v-html="field.value"></div>
             <span v-else class="inline-block pt-2 leading-tight">{{ field.value }}</span>
@@ -18,6 +18,9 @@ export default {
     computed: {
         shouldDisplayAsHtml() {
             return this.field.asHtml
+        },
+        isFullWidth(){
+            return this.field.fullWidth
         }
     }
 };

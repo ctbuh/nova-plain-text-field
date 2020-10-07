@@ -25,4 +25,9 @@ class PlainText extends Field
     {
         return $this->withMeta(['asHtml' => false]);
     }
+    
+    public function fullWidth($bool)
+    {
+        return $this->withMeta(['fullWidth' => !!$bool]);
+    }
 }
